@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 240 30% 98%;
+    --card: 240 10% 8%;
+    --card-foreground: 240 30% 98%;
+    --popover: 240 10% 8%;
+    --popover-foreground: 240 30% 98%;
+    --primary: 263 85% 62%;
+    --primary-foreground: 240 30% 98%;
+    --secondary: 240 10% 15%;
+    --secondary-foreground: 240 30% 98%;
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 30% 60%;
+    --accent: 263 85% 62%;
+    --accent-foreground: 240 30% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 240 30% 98%;
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 263 85% 62%;
+    --radius: 0.5rem;
+
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system,
+      BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: dark;
+    color: rgba(240, 240, 255, 0.92);
+    background-color: #040013;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: radial-gradient(120% 140% at 50% 10%, #16102f, #040013 70%);
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
