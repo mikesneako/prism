@@ -2,6 +2,7 @@ import { Check, Copy, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Motion, spring } from "react-motion";
 import "./App.css";
+import { YourCheckoutComponent } from "./Checkout";
 
 const avatarGradients = [
   "linear-gradient(135deg, #ff8ec7, #8b48ff)",
@@ -40,6 +41,9 @@ function PresaleModal({ isOpen, onClose }: PresaleModalProps) {
     <div
       className="modal-overlay"
       onClick={onClose}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") onClose();
+      }}
       role="dialog"
       aria-modal="true"
     >
@@ -51,7 +55,7 @@ function PresaleModal({ isOpen, onClose }: PresaleModalProps) {
           y: spring(isOpen ? 0 : 20, { stiffness: 300, damping: 25 }),
         }}
       >
-        {(interpolatedStyle: any) => (
+        {(interpolatedStyle) => (
           <div
             className="modal-content"
             style={{
@@ -59,6 +63,8 @@ function PresaleModal({ isOpen, onClose }: PresaleModalProps) {
               opacity: interpolatedStyle.opacity,
             }}
             onClick={(e) => e.stopPropagation()}
+            onKeyDown={(e) => e.stopPropagation()}
+            role="document"
           >
             <button
               type="button"
@@ -162,7 +168,7 @@ function App() {
           scale: spring(mounted ? 1 : 0.94, { stiffness: 120, damping: 10 }),
         }}
       >
-        {(interpolatedStyle: any) => (
+        {(interpolatedStyle) => (
           <main
             className="hero"
             style={{
@@ -193,7 +199,7 @@ function App() {
                 }),
               }}
             >
-              {(interpolatedStyle: any) => (
+              {(interpolatedStyle) => (
                 <span
                   className="hero-pill"
                   style={{
@@ -207,10 +213,17 @@ function App() {
               )}
             </Motion>
 
-            <h1 className="hero-title">
-             Why Wait, When you can be Rich Now
-            </h1>
-
+            <h1 className="hero-title">Why Wait, When you can be Rich Now</h1>
+            <div
+              style={{
+                width: "100%",
+                justifyContent: "center",
+                display: "flex",
+              }}
+            >
+              {" "}
+              <YourCheckoutComponent />
+            </div>
             <p className="hero-subtitle">
               Get in early. Our new tool spots low-cap runners before they take
               off. No noise, just clean signals. Join the Telegram for early
@@ -219,7 +232,7 @@ function App() {
             </p>
 
             <div className="hero-cta">
-              <button
+              {/* <button
                 type="button"
                 className="cta-button cta-button--primary"
                 onClick={() => setPresaleModalOpen(true)}
@@ -228,7 +241,7 @@ function App() {
                 <span className="cta-arrow" aria-hidden="true">
                   →
                 </span>
-              </button>
+              </button> */}
               <a
                 className="cta-button cta-button--secondary"
                 href="https://t.me/prismxsol"

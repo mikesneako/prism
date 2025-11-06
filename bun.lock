@@ -4,6 +4,7 @@
     "": {
       "name": "prism",
       "dependencies": {
+        "@heliofi/checkout-react": "^4.0.2",
         "@tailwindcss/postcss": "^4.1.16",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
@@ -101,6 +102,8 @@
     "@eslint/object-schema": ["@eslint/object-schema@2.1.7", "", {}, "sha512-VtAOaymWVfZcmZbp6E2mympDIHvyjXs/12LqWYjVw6qjrfF+VK+fyG33kChz3nnK+SU5/NeHOqrTEHS8sXO3OA=="],
 
     "@eslint/plugin-kit": ["@eslint/plugin-kit@0.4.1", "", { "dependencies": { "@eslint/core": "^0.17.0", "levn": "^0.4.1" } }, "sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA=="],
+
+    "@heliofi/checkout-react": ["@heliofi/checkout-react@4.0.2", "", { "peerDependencies": { "react": ">=18.2.0 <20", "react-dom": ">=18.2.0 <20" } }, "sha512-oBe5E7GA8WEc7Mzd5UNF80dvenyBEv0eaIj3/R7eC3Lm1Aro8F0UWw2QS06Gyr22fkUO6qi4RK/oKsax3gU7zQ=="],
 
     "@humanfs/core": ["@humanfs/core@0.19.1", "", {}, "sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA=="],
 
